@@ -62,11 +62,11 @@ int print_d(int input, int fd)
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
-		_putchar = _eputchar;
+		__putchar = _eputchar;
 	if (input < 0)
 	{
 		_abs_ = -input;
-		_putchar('-');
+		__putchar('-');
 		count++;
 	}
 	else
@@ -76,12 +76,12 @@ int print_d(int input, int fd)
 	{
 		if (_abs_ / i)
 		{
-			_putchar('0' + current / i);
+			__putchar('0' + current / i);
 			count++;
 		}
 		current %= i;
 	}
-	_putchar('0' + current);
+	__putchar('0' + current);
 	count++;
 
 	return (count);

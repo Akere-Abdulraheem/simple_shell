@@ -7,7 +7,7 @@
  * (0) if info.argv[0] != "exit"
  */
 
-nt _myexit(info_t *info)
+int _myexit(info_t *info)
 {
 	int exitcheck;
 
